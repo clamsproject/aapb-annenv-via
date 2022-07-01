@@ -36,5 +36,5 @@ docker run \
     -p 9779:9779 \
     -v $data_dir:/data/ \
     -v $media_dir:/media/:ro \
-    clams-via \
+    kelleyl/clams-via \
     $4
