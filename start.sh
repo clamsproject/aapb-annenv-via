@@ -14,16 +14,16 @@ fi
 
 # # downloaded from https://gitlab.com/vgg/vps/-/blob/master/scripts/create_bucket_folders.sh
 # # For VIA project server, create all the required folders
-# current=0
-# end=255
+current=0
+end=255
 
-# for i in $(seq 0 255);
-# do
-#   x=$(printf "%.2x\n" $i)
-#   echo $2"/"$x
-#   mkdir $2"/"$x
-# done
-# ######################
+for i in $(seq 0 255);
+do
+  x=$(printf "%.2x\n" $i)
+  echo $2"/"$x
+  mkdir $2"/"$x
+done
+######################
 
 set -x
 cp "$conf_dir"/*.json "$data_dir"
